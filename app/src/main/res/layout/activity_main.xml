@@ -6,9 +6,8 @@
                 android:paddingLeft="@dimen/activity_horizontal_margin"
                 android:paddingRight="@dimen/activity_horizontal_margin"
                 android:paddingTop="@dimen/activity_vertical_margin"
-                android:paddingBottom="@dimen/activity_vertical_margin"
                 tools:context=".MainActivity"
-                android:background="#FFFC970B">
+                android:background="@drawable/bg_gradient">
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -122,12 +121,11 @@
         android:layout_height="wrap_content"
         android:text="Getting current weather..."
         android:id="@+id/summaryLabel"
-        android:layout_below="@+id/linearLayout"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp"
         android:textColor="@android:color/white"
         android:textSize="18dp"
-        android:gravity="center_horizontal"/>
+        android:gravity="center_horizontal"
+        android:layout_below="@+id/linearLayout"
+        android:layout_centerHorizontal="true"/>
 
     <ImageView
         android:layout_width="wrap_content"
@@ -144,4 +142,35 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_alignBottom="@+id/refreshImageView"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="false"
+        android:layout_alignParentStart="false"
+        android:layout_alignParentBottom="true"
+        android:baselineAligned="true"
+        android:id="@+id/linearLayout2">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="HOURLY"
+            android:id="@+id/hourlyButton"
+            android:layout_weight="1"
+            android:layout_gravity="bottom"
+            android:background="#40ffffff"
+            android:textColor="#FFFFFF"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="7 DAY"
+            android:id="@+id/dailyButton"
+            android:layout_weight="1"
+            android:background="#40ffffff"
+            android:textColor="#FFFFFF"
+            android:layout_marginLeft="2dp"/>
+    </LinearLayout>
 </RelativeLayout>
